@@ -1,4 +1,5 @@
 const express = require('express');
+const GHServices = require('../services/githubServices/GHWebhooksService');
 const router = express.Router();
 
 router.post('/', async function (req, res) {
@@ -7,7 +8,7 @@ router.post('/', async function (req, res) {
     status: 'ok',
   };
   try {
-    console.log(data);
+    GHServices(data);
     res.status(200).json(info);
   } catch (error) {
     console.log('An error occurred');

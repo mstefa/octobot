@@ -1,11 +1,11 @@
 // Require the necessary discord.js classes
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
-// const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 
 // config dot env
-// dotenv.config();
-// const token = process.env.TOKEN;
+dotenv.config();
+const token = process.env.DISCORDTOKEN;
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -49,6 +49,6 @@ client.on('interactionCreate', async (interaction) => {
 });
 
 // Login to Discord with your client's token
-// client.login(token);
+client.login(token);
 
 module.exports = client;

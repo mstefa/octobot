@@ -1,13 +1,8 @@
 require('dotenv').config();
-const server = require('./src/index.js');
-const discordBot = require('./discord-bot/index');
+const server = require('./src/server.js');
+
 // const { conn } = require('./src/db.js');
-const { PORT, DISCORDTOKEN } = process.env;
-
-// Starting disccord bot
-// Login to Discord with your client's token
-discordBot.login(DISCORDTOKEN);
-
+const { PORT } = process.env;
 
 // Syncing all the models at once.
 // conn.sync({ force: false }).then(() => {
