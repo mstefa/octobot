@@ -8,7 +8,7 @@ const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
-router.use('/gh', ghwebhooks);
+router.use('/api/v1/gh', ghwebhooks);
 
 router.get('/ping', async function(req, res) {
   const info = {
