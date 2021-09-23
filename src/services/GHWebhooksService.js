@@ -4,7 +4,7 @@ function processEvent(payload) {
   console.log(payload);
   let message = {};
 
-  if (payload.commits.lenght() > 0) {
+  if (payload.commits.length > 0) {
     message = {
       action : 'push',
       pusher: payload.pusher?.name,

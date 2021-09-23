@@ -7,8 +7,9 @@ function sendMessage(data) {
     message = `El usuario ${data?.pusher} a actualizado el repositorio ${data.respository}`;
   }
   else {
-    channel.send(message.action);
+    message = message.action;
   }
+  channel.send(message);
 }
 
 module.exports = { sendMessage };
